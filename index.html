@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> markzone on Map </title>
+    </head>    
+    <body>
+    <table border="1" style="width:300px;height:300px">
+  	<tr align="center">
+    		<td id="1"></td>
+    		<td id="2"></td>
+    		<td id="3"></td>
+  	</tr>
+  	<tr align="center">
+    		<td id="4"></td>
+    		<td id="5"></td>
+    		<td id="6"></td>
+  	</tr>
+  	<tr align="center">	
+    		<td id="7"></td>
+    		<td id="8"></td>
+    		<td id="9"></td>
+  	</tr>
+	</table>
+      
+     </body>
+     		
+        <p>
+            ZONE: &nbsp <input id="zone" type="text" value="">
+            
+      
+        </p>
+        <script>
+       	var ids = [ "1","2","3","4","5","6","7","8","9" ]
+             function update_id(zone_id){  // update_id
+                if(zone_id)
+                    {
+                	document.getElementById('zone').value = zone_id;
+  			document.getElementById(zone_id).style.backgroundColor='black';
+  				for(i=0; i<9; i++)
+  				{
+  					  if(ids[i] != zone_id)
+  					   {
+  					  	document.getElementById(ids[i]).style.backgroundColor='white';
+  					   }
+  				}
+                   }
+                else; 
+          		
+                   
+             }
+        </script>
+</html>
